@@ -6,17 +6,20 @@ import Cart from "./features/cart/Cart.jsx";
 import CreateOrder from "./features/order/CreateOrder.jsx";
 import Order from "./features/order/Order.jsx";
 import AppLayout from "./ui/AppLayout.jsx";
-import { getMenu } from "./services/apiRestaurant.js";
+import Error from "./ui/Error.jsx";
 
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
+    errorElement: <Error />,
+
     children: [
       { path: "/", element: <Home /> },
       {
         path: "/menu",
         element: <Menu />,
         loader: menuLoader,
+        errorElement: <Error />,
       },
       { path: "/cart", element: <Cart /> },
       { path: "/order/new", element: <CreateOrder /> },
