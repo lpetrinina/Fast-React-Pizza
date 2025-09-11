@@ -33,6 +33,7 @@ export async function createOrder(newOrder) {
 
         const { data } = await res.json();
         return data;
+
     } catch {
         throw Error('Failed creating your order');
     }
