@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
 
+@theme {
+    /* Font falimy */
+    --font-sans: 'Roboto Mono', monospace;
+}
+
+
 /* https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
 .loader {
   width: 45px;
