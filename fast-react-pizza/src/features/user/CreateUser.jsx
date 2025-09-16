@@ -25,7 +25,7 @@ function CreateUser() {
         className={`${inputStyle} mb-8`}
       />
 
-      {username !== '' && <Button>Start ordering</Button>}
+      {username !== '' && <Button type="primary">Start ordering</Button>}
     </form>
   );
 }
