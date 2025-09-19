@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Form, redirect, useActionData, useNavigation } from 'react-router';
+import { useSelector } from 'react-redux';
+
 import { createOrder } from '../../services/apiRestaurant';
 import Button from '../../ui/Button';
 
@@ -37,6 +39,7 @@ const inputStyle =
   'rounded-full border border-stone-200 px-4 py-2 text-sm transition-all duration-300 focus:ring focus:ring-yellow-400 focus:outline-none md:px-6 md:py-3';
 
 function CreateOrder() {
+  const username = useSelector((state) => state.user.username);
   const navigation = useNavigation();
   const isSubmitting = navigation.state === 'submitting';
 
@@ -57,6 +60,7 @@ function CreateOrder() {
             className={`${inputStyle} grow`}
             type="text"
             name="customer"
+            defaultValue={username}
             required
           />
         </div>
