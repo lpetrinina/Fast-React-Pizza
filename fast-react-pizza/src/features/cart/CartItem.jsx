@@ -1,6 +1,7 @@
 import Button from '../../ui/Button';
 import { formatCurrency } from '../../utils/helpers';
 import DeleteItem from './DeleteItem';
+import UpdateItemQuantity from './UpdateItemQuantity';
 
 function CartItem({ item }) {
   const { pizzaId, name, quantity, totalPrice } = item;
@@ -14,7 +15,11 @@ function CartItem({ item }) {
       <div className="flex items-center justify-between sm:gap-6">
         <p className="text-sm font-bold">{formatCurrency(totalPrice)}</p>
 
-        <DeleteItem pizzaId={pizzaId} />
+        <div className="flex items-center gap-4 sm:gap-8">
+          <UpdateItemQuantity pizzaId={pizzaId} currentQuantity={quantity} />
+
+          <DeleteItem pizzaId={pizzaId} />
+        </div>
       </div>
     </li>
   );
