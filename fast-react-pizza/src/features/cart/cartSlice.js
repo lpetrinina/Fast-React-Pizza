@@ -1,14 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    // cart: [],
-    cart: [{
-        pizzaId: 6,
-        name: 'Vegetale',
-        quantity: 1,
-        unitPrice: 13,
-        totalPrice: 13,
-    },]
+    cart: [],
 };
 
 const cartSlice = createSlice({
@@ -43,3 +36,10 @@ const cartSlice = createSlice({
 export const { addItem, deleteItem, increaseItemQuantity, decreaseItemQuantity, clearCart } = cartSlice.actions;
 
 export default cartSlice.reducer;
+
+// Redux recomments extracting the selectors from the component; The goal is reusability
+export const getTotalCartQuantity = (state) =>
+    state.cart.cart.reduce((acc, item) => acc + item.quantity, 0);
+
+export const getTotalCartPrice = (state) =>
+    state.cart.cart.reduce((acc, item) => acc + item.totalPrice, 0);
