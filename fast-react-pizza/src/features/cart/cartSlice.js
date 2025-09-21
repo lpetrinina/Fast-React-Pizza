@@ -37,7 +37,11 @@ export const { addItem, deleteItem, increaseItemQuantity, decreaseItemQuantity, 
 
 export default cartSlice.reducer;
 
-// Redux recomments extracting the selectors from the component; The goal is reusability
+// * Redux recomments extracting the selectors from the component; The goal is reusability
+
+export const getCart = state => state.cart.cart;
+export const getUsername = state => state.user.username;
+
 export const getTotalCartQuantity = (state) =>
     state.cart.cart.reduce((acc, item) => acc + item.quantity, 0);
 
