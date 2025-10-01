@@ -164,8 +164,6 @@ export async function action({ request }) {
     cart: JSON.parse(data.cart),
   };
 
-  console.log(order);
-
   const errors = {};
 
   if (!isValidPhone(order.phone)) {
