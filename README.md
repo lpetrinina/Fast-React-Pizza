@@ -4,15 +4,13 @@ Fast React Pizza is a Single page application that allows users to order one or 
 
 <img width="4656" height="2877" alt="Screen Shot 2025-10-04 at 15 36 01" src="https://github.com/user-attachments/assets/4cd47b65-7de4-413c-b313-d848a84c1622" />
 
-## Installation 
+### Installation 
 
-Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
+⚠️ Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
-Installation:
-`npm install`
+ Installation:  👉  `npm install`
 
-To start client:
-`npm run dev`
+  To start client: 👉  `npm run dev`
 
 ### Usage 
 
@@ -42,6 +40,7 @@ To start client:
 - 🎨 **Tailwind CSS** for styling
 - 🔀 **React Router** for dynamic routing and remote 'state' management (fetch and submit data to API)
 - 📦 **Redux Toolkit** for global UI state management
+
 
 
 ## Project Screen Shots
